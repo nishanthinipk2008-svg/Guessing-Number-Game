@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game-container">
+        <h1>🎮 Number Quest</h1>
+        <p class="subtitle">Can you guess the secret number?</p>
+
+        <div class="game-info">
+            <span>🎯 Range: 1 - 100</span>
+            <span>❤️ Attempts: <b id="attempts">0</b></span>
+        </div>
+
+        <div class="number-box" id="numberBox">?</div>
+
+        <p id="message">Start the game and find the secret number!</p>
+
+        <div class="input-area">
+            <input type="number" id="guessInput"
+                   placeholder="Enter your guess" min="1" max="100">
+            <button id="guessBtn" onclick="checkGuess()">Guess</button>
+        </div>
+
+        <button class="start-btn" id="startBtn" onclick="startGame()">
+            Start Game
+        </button>
+
+        <button class="restart-btn" id="restartBtn"
+                onclick="startGame()" hidden>
+            Play Again ↻
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
